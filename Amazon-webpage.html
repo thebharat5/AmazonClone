@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_drop_down" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+         margin: 0;
+         padding: 0;
+         font-family: Arial, Helvetica, sans-serif;
+            
+        }
+        #nav-top{
+            background-color: hsl(180, 10%, 10%);
+            color: white;
+            display: flex;
+            height: 60px;
+            width: 100%;
+            align-items: center;
+         
+        }
+        .nav-down{
+           height: 40px;
+           background-color: #232F3E;
+           display: flex;
+           color: white;
+           align-items: center;
+   
+        }
+        .box{
+            margin: 0 20px 0 10px;
+            font-size: 14px;
+        }
+        i{
+            margin-left: 20px;
+            font-size: 18px;
+        }
+        #icon{
+          display: flex; 
+          align-items: center; 
+            
+        }
+        .location{
+            margin-left:5px;
+            margin-top: -10px
+        }
+        .deliver,.hello,.return{
+            font-size: 12px;
+            color: #cccc;
+        }
+        .india,.account,.orders,.cart{
+            font-weight: 650;
+            font-size: 15px;
+        }
+        .search{
+            display: flex;
+            margin-left: 20px;
+            width: 58%;
+            height: 40px; 
+        }
+        .search input{
+            flex-grow: 1;
+            font-size: 14px;
+            padding-left: 5px;
+            border: 1px solid transparent;
+            border-radius: 0;
+           
+        }
+        .search select{
+            width: 50px;
+           padding-left: 8px;
+           color: #686161;
+           border: 1px solid transparent;
+           background-color: rgb(213, 214, 215);
+           border-top-left-radius: 10%;
+           border-bottom-left-radius: 10%;
+           
+        }
+        .search i{
+        background-color: rgb(226, 183, 10);
+        margin-left: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 45px;
+        flex-shrink: 0;
+        color: black;
+        border-top-right-radius: 10%;
+        border-bottom-right-radius: 10%;
+
+        }
+        .usflag img{
+            height: 15px;   
+        }
+        .usflag{
+            display: flex;
+            margin-left: 20px;
+            gap: 5px;
+            font-size: 13px;
+            font-weight: 700;
+            margin-top:15px;
+            
+        }
+        .usflag select{
+            background-color:hsl(180, 10%, 10%);
+            border-style: none;
+            color: rgb(212, 213, 214);
+            margin-left:-5px;
+        }
+        .usflag span{
+            background-color: transparent;
+            margin-left: -5px;
+            margin-top: -5px;
+             
+        }
+        .signin,.returnorders{
+            margin-left: 20px;
+
+        }
+        .cart{
+            display: flex;
+            gap: 6px;
+            align-items: center;
+           
+        }
+        .cart i{
+            font-size: 30px;
+
+        }
+        .cart p{
+            margin-top: 19px;
+        }
+        #logo{
+            margin-left: 18px;
+            height: 50px;
+        }
+        .toys{
+            height: 330px;
+            background-image: url("toys.jpg");
+            background-size: cover;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+    
+        }
+        .msg {
+            background-color: white;
+            justify-content: center;
+            height: 40px;
+            width: 97%;
+            font-size: 14px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 25px;
+            
+        }
+        .toys a{
+            color: #007185;
+            
+        }
+        .content1,.content2{
+            display: flex;
+            background-color: #e2e7e6;
+            justify-content: space-evenly;
+            
+        }
+        .content1 .box,.content2 .box{
+            background-color: white;
+            color: #071111;
+            font-size: 21px;
+            font-weight: 700;
+            padding: 20px;
+            height: 400px;
+            width:345px;
+            margin-left: 0px;
+            
+        }
+        
+        .getyourgame img {
+            width: 308px;
+            height: 300px;
+            margin-top: 10px;
+        }
+        .hedsetkeyboard, .micechairs{
+            display: flex;
+            width: 62%;
+            margin-top: 15px;
+            gap:0px;
+            margin-left: -15px;
+
+        }
+        .hedsetkeyboard img, .micechairs img{
+            width: 165px;
+            height: 115px;
+            
+        }
+        .names1{
+            font-size: 13px;
+            display: flex;
+            gap: 114px;
+            font-weight: lighter;
+
+        }
+        .names2{
+            font-size: 13px;
+            display: flex;
+            gap: 90px;
+            font-weight: lighter;
+
+        }
+        .links{
+            color: #007185;
+            font-size: 13px;
+            font-weight: lighter;
+            position: relative;
+            bottom: -30px;
+        }
+       
+        .cleaninghome,.homebedding,.jeanstops,.dressesshoes{
+            display: flex;
+            gap: 10px;
+        }
+        .cleaninghome img,.homebedding img,.jeanstops img,.dressesshoes img{
+            width: 154px;
+            height: 115px;
+            margin-top:15px;
+            box-sizing: border-box;
+            
+        }
+        .kitchenpaints,.decorbedding,.desktopslaptops,.harddrivespc{
+           display: flex;
+           gap: 10px;
+        }
+        .kitchenpaints img,.decorbedding img,.desktopslaptops img,.harddrivespc img{
+            width: 154px;
+            height: 115px;
+            margin-top:15px;
+            box-sizing: border-box;
+            
+        }
+        .beautydining,.homekitchen{
+            display: flex;
+            gap: 10px;
+        }
+        .beautydining img,.homekitchen img{
+            width: 145px;
+            height: 110px;
+            margin-top:15px;
+            box-sizing: border-box;
+
+        }
+
+        .cooker img{
+            width: 300px; 
+            height: 140px;
+            margin-top: 10px;
+        }
+        .coffeepotskettles{
+            display: flex;
+    
+        }
+        .coffeepotskettles img{
+            width: 95px;
+            height: 70px;
+            margin-top: 10px;
+            padding-right: 7px;
+        }
+        .content2 .box{
+           margin-top: 20px;
+        }
+        
+        .content3{
+            background-color: #e2e7e6;
+            border: 1px solid transparent;
+            
+        }
+        .mainbox{
+            font-size: 21px;
+            font-weight: 700;
+            height: 260px;
+            padding: 20px;
+            margin-left: 20px;
+            background-color: white;
+            margin-top: 20px; 
+            margin-right:20px ;
+
+        }
+        .mainbox img{
+            margin-top: 10px;
+            margin-right: 3px;
+        }
+        
+        .lastbox{
+            background-color: #e2e7e6;
+            border: 2px solid transparent;
+           
+        }
+        .signinbutton{
+            background-color: white;
+            height: 187PX;
+            margin-top: 20px;
+            
+            
+        }
+        .see{
+            font-size: 25px;
+            font-weight: 700;
+            padding-top: 50px;
+            text-align: center;
+            
+        }
+        .button{
+            background-color: rgb(242, 215, 10);
+            height: 30px;
+            width: 230px;
+            border-radius: 20px;
+            border: none;
+            position: relative;
+            left: 640px;
+            margin-top: 10px;
+
+        }
+        .new{
+           font-size: 11px;
+           font-weight: 400;
+           text-align: center;
+           margin-top:10px;
+
+        }
+        .backtotop{
+            background-color: #324760;
+            padding: 19px;
+            font-size: 13px;
+            color: white;
+            text-align: center;
+        }
+        .footer{
+            display: flex;
+            height: 330px;
+            background-color:#232F3E;
+            color: white;
+            justify-content: space-evenly;
+            padding-top: 40px;
+        }
+        .column1 p,.column2 p,.column3 p,.column4 p{
+            font-size: 14px;
+            padding-top:13px;
+            color: #dddd;
+        }
+        .logobox{
+            height: 98px;
+            background-color:#232F3E ;
+            border-top: 1px solid #324760;
+        }
+        .logobox img{
+            position: relative;
+            left: 500px;
+            top: 40px;
+        }
+        .copyright,.rights{
+            background-color: #131A22;
+            height: 30px;
+            display: flex;
+            color: #dddd;
+            font-size: 12px;
+            justify-content: center;
+            align-items: center;
+        }
+        .usd{
+            color: #dddd;
+            font-size: 13px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-left: 100px;
+        }
+        .usd p{
+           border: 1px solid #dddd;
+           padding: 8px;
+           border-radius: 2px;
+        }
+
+    </style>
+</head>
+<body>
+  <header>
+     <div class="navbar">
+         <div id="nav-top">
+             <img src="amazonlogo.png" alt="amazon" id="logo">
+             
+             <div id="icon">
+                 <i class="fa-solid fa-location-dot"></i>
+                 <div class="location">
+                     <p class="deliver">Deliver to</p>
+                     <p class="india">India</p>
+                 </div>
+             </div>
+
+             <div class="search">
+                 <select>
+                    <option>All</option>
+                 </select>
+                 <input placeholder="Search Amazon">
+                 <i class="fa-solid fa-magnifying-glass"></i>
+             </div>
+
+             <div class="usflag">
+                 <img src="us flag.png" alt="flag">
+                 <p>EN</p>
+                 <span class="material-symbols-outlined">
+                    arrow_drop_down
+                    </span>
+             </div>
+
+             <div class="signin">
+                 <p class="hello">Hello, sign in</p>
+                 <p class="account">Account&Lists</p>
+             </div>
+
+             <div class="returnorders">
+                 <p class="return">Returns</p>
+                 <p class="orders">& Orders</p>
+             </div>
+
+             <div class="cart">
+                 <i class="bi bi-cart2"></i>
+                 <p>Cart</p>
+             </div>
+         </div>
+         
+          <div class="nav-down">
+             <i class="fa-solid fa-bars"></i>
+             <div class="box">All</div>
+             <div class="box">Today's Deals</div>
+             <div class="box">Registry</div>
+             <div class="box">Customer Service</div>
+             <div class="box">Gift Cards</div>
+             <div class="box">Sell</div>
+          </div>
+        </div> 
+  </header>
+
+ <div class="toys">
+     <div class="msg">
+         <p>You are on amazon.com. You can also shop on Amazon India for millions of products with fast local delivery. <a>Click here to go to amazon.in<a></p>
+     </div>   
+ </div>
+ <div class="content1">
+     <div class="box" style="margin-left: 20px;">
+         <p>Get your game on</p>
+         <div class="getyourgame">
+             <img src="get your game.jpg" alt="gaming">
+         </div> 
+         <p class="links">Shop gaming</p>
+     </div>
+
+     <div class="box">
+         <p>Gaming Accessories</p>
+         <div class="hedsetkeyboard">
+             <img src="hedset.jpg" alt="headset">
+             <img src="keyboard.jpg" alt="keyboard">
+         </div>
+         <div class="names1">
+             <p>Headsets</p>
+             <p>keyboard</p>
+         </div>
+         <div class="micechairs">
+             <img src="mice.jpg" alt="mice">
+             <img src="chairs.jpg" alt="chairs">
+         </div>
+         <div class="names2">
+             <p>Computer mice</p>
+             <p>Chairs</p>
+         </div>
+         <p class="links">See more</p>
+     </div>
+     <div class="box">
+         <p>Shop for your home essentials</p>
+         <div class="cleaninghome">
+             <img src="cleaningtools.jpg" alt="cleaninghome">
+             <img src="home-storage.jpg" alt="homebedding" style="padding-right: 0px;">
+         </div>
+         <div class="names1">
+             <p>Cleaning</p>
+             <p>Home Storage</p>
+         </div>
+         <div class="homebedding">
+             <img src="home-decor.jpg" alt="mice">
+             <img src="bedding.jpg" alt="chairs" style="padding-right: 0px;">
+         </div>
+         <div class="names2">
+             <p>Home Decor</p>
+             <p>Bedding</p>
+         </div>
+         <p class="links">Discover more in home</p>
+     </div>
+     <div class="box" style="padding-right: 0px;">
+         <p>Top categories in kitchen appliances</p>
+         <div class="cooker">
+             <img src="cooker.jpg" alt="">
+             
+         </div>
+         <div class="names1">
+             <p>Cooker</p>
+         </div>
+         <div class="coffeepotskettles">
+            <img src="coffee.jpg" alt="keyboard">
+             <img src="pots-pans.jpg" alt="mice">
+             <img src="kettles.jpg" alt="chairs">
+         </div>
+         <div class="names2" style="display: flex; gap: 70px;">
+             <p>Coffee</p>
+             <p>Pots-Pans</p>
+             <p>Kettles</p>
+         </div>
+         <p class="links">Explore all products in Kitchen</p>
+     </div>
+ </div>
+ <div class="content2">
+     <div class="box" style="margin-left: 20px;">
+         <p>Shop deals in Fashion</p>
+         <div class="jeanstops">
+             <img src="jeans.jpg" alt="jeans">
+             <img src="t-shirts.jpg" alt="t-shirts" style="padding-right: 0px;">
+         </div>
+         <div class="names1" style="gap: 130px;">
+             <p>Jeans</p>
+             <p>Tops</p>
+         </div>
+         <div class="dressesshoes">
+             <img src="dresses.jpg" alt="dresses">
+             <img src="shoes.jpg" alt="shoes"style="padding-right: 0px;">
+         </div>
+         <div class="names2" style="gap: 119px;">
+             <p>Dresses</p>
+             <p>Shoes</p>
+         </div>
+         <p class="links">see all deals</p>
+     </div> 
+     <div class="box">
+        <p>New home arrivals under $50</p>
+        <div class="kitchenpaints">
+             <img src="kitchen-dining.jpg" alt="dining">
+             <img src="paints.jpg" alt="paints" style="padding-right: 0px;">
+        </div>
+        <div class="names1"  style="gap: 70px;">
+             <p>Kitchen & Dining</p>
+             <p>Paints</p>
+        </div>
+        <div class="decorbedding">
+             <img src="decor.jpg" alt="mice">
+             <img src="bedding-bath.jpg" alt="chairs" style="padding-right: 0px;">
+        </div>
+        <div class="names2" style="gap: 131px;">
+             <p>Decor</p>
+             <p>Bedding & Bath</p>
+        </div>
+        <p class="links">see all deals</p>
+     </div> 
+     <div class="box">
+         <p>Score the top PCs & Accessories</p>
+         <div class="desktopslaptops">
+             <img src="desktops.jpg" alt="headset">
+             <img src="laptops.jpg" alt="keyboard" style="padding-right: 0px;">
+         </div>
+         <div class="names1">
+             <p>Desktops</p>
+             <p>Laptops</p>
+         </div>
+         <div class="harddrivespc">
+             <img src="harddrives.jpg" alt="mice">
+             <img src="pc accessories.jpg" alt="chairs" style="padding-right: 0px;">
+         </div>
+         <div class="names2" style="gap: 102px;">
+             <p>Harddrives</p>
+             <p>Pc Accessories</p>
+         </div>
+         <p class="links">see more</p>
+     </div> 
+     <div class="box" style="padding-right: 0px;">
+         <p>Shop deals in Fashion</p>
+         <div class="beautydining">
+             <img src="beauty.jpg" alt="headset">
+             <img src="dining.jpg" alt="keyboard" >
+         </div>
+         <div class="names1">
+             <p>Beauty</p>
+             <p>Dining</p>
+         </div>
+         <div class="homekitchen">
+             <img src="home.jpg" alt="mice">
+             <img src="kitchen.jpg" alt="chairs">
+         </div>
+         <div class="names2" style="gap: 122px;">
+             <p>Home</p>
+             <p st>Kitchen</p>
+         </div>
+         <p class="links">Explore more</p>
+     </div> 
+ </div>  
+ <div class="content3">
+     <div class="mainbox">
+         <p>Most wished for in Books</p>
+         <img src="whobelievebook.jpg" alt="">
+         <img src="ummabook.jpg" alt="">
+         <img src="momswaybook.jpg" alt="">
+         <img src="sunrisebook.jpg" alt="">
+         <img src="letthembook.jpg" alt="">
+         <img src="itsnoteasybook.jpg" alt="">
+         <img src="howtocatchbook.jpg" alt="">
+         <img src="fearlessbook.jpg" alt="">
+         <img src="chinatownbook.jpg" alt="">
+     </div>
+ </div>
+ <div class="lastbox">
+     <div class="signinbutton">
+         <p class="see">See personalized recommendations</p>
+         <button class="button">Sign in</button>
+         <p class="new" >New customer? <a href="#">Start here.</a></p>
+     </div>
+ </div>
+ <div class="backtotop">
+    <p>Back to Top</p>
+ </div>
+ <footer>
+     <div class="footer">
+         <div class="column1">
+            <p style="font-weight: 700; font-size: 16px;color: white;">Get to Know Us</p>
+            <p>Careers</p>
+            <p>Blog</p>
+            <p>About Amazon</p>
+            <p>Investor Relations</p>
+            <p> Amazon Devices</p>
+            <p>Amazon Science</p>
+         </div>
+         <div class="column2">
+             <p style="font-weight: 700; font-size: 16px; color: white;">Make Money with Us</p>
+             <p>Sell products on Amazon</p>
+             <p>Sell on Amazon Business</p>
+             <p>Sell apps on Amazon</p>
+             <p>Become an Affiliate</p>
+             <p>Advertise Your Products</p>
+             <p>Self-Publish with Us</p>
+             <p>Host an Amazon Hub</p>
+         </div>
+         <div class="column3">
+             <p style="font-weight: 700; font-size: 16px; color: white;">Amazon Payment Products</p>
+             <p>Amazon Currency Converter</p>
+             <p>Amazon Business Card</p>
+             <p>Shop with Points</p>
+             <p>Reload Your Balance</p>
+         </div>
+         <div class="column4">
+             <p style="font-weight: 700; font-size: 16px; color: white;">Let Us Help You</p>
+             <p>Amazon and COVID-19</p>
+             <p>Your Account</p>
+             <p> Your Orders</p>
+             <p> Shipping Rates & Policies</p>
+             <p>Returns & Replacements</p>
+             <p> Manage Your Content and Devices</p>
+             <p>Help</p>
+         </div>
+     </div>
+     <div class="logobox">
+         <img src="amazonwhite.png" alt="logo" width="80px">
+         <div class="usd">
+             <p>English</p>
+             <p>USD-U.S.Dollor</p>
+             <p>United States</p>
+         </div>
+     </div>
+     <div class="copyright">
+        <p>Conditions of Use</p>
+        <p>Privacy Notice</p>
+        <p>Consumer Health Data Privacy Disclosure</p>
+        <p>Your Ads Privacy Choices</p>
+     </div>
+     <div class="rights" style="align-items: flex-start;">
+        <p>© 1996-2025, Amazon.com, Inc. or its affiliates</p>
+     </div>
+ </footer>
+</body>
+</html>
